@@ -1,0 +1,23 @@
+.suggest__input {
+    width: 264px;
+  }
+  
+  .suggest__suggest-box {
+    width: 280px;
+    border: 1px solid gray;
+  }
+  
+  .suggest__suggest-box_empty {
+    display: none;
+  }
+  
+  .suggest__suggest-line {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+  }
+  
+  .suggest__suggest-line_focused {
+    background-color: #ffeba0;
+  }
+  

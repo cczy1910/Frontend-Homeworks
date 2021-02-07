@@ -1,0 +1,235 @@
+#dark-mode {
+    display: none;
+}
+
+.dark {
+    display: none;
+}
+
+#dark-mode:checked ~ .main-wrapper .dark {
+    display: block;
+}
+
+
+#dark-mode:checked ~ .main-wrapper .light {
+    display: none;
+}
+
+.background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.main-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#dark-mode:checked ~ .main-wrapper {
+    color: white;
+}
+
+
+#dark-mode:checked ~ .background {
+    background-color: black;
+}
+
+.dark-mode-label {
+    font-size: 1vw;
+    margin: 1vw 0.4vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark-mode-ind {
+    height: 1.8vw;
+    width: 1.8vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+header {
+    margin: 1% 3%;
+    border-bottom: 2px solid black;
+}
+
+#dark-mode:checked ~ .main-wrapper header {
+    border-bottom: 2px solid white;
+}
+
+header .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .title {
+    font-variant: small-caps;
+    font-size: 4vw;
+    /* font-size: 75px; */
+    margin: 4vw 2vw;
+}
+
+header .logo {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 5vw;
+}
+
+header .control {
+    /* border: 1px solid gray;
+    border-radius: 5px; */
+    position: absolute;
+    right: 0;
+    top: 0;;
+}
+
+header .control label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .header-quote {
+    margin: auto;
+    text-align: center;
+    color: gray;
+    position: relative;
+    bottom: 0.7vw;
+    font-size: 1vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    display: grid;
+    margin: 0 2vw;
+    grid-template-areas: 
+        'article3 article2'
+        'article1 article2';
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);   
+    grid-template-rows: max-content 1fr;
+}
+
+main .article {
+    hyphens: auto;
+    text-align: justify;
+    font-size: 1vw;
+    /* border: 1px solid black; */
+}
+
+main .first-article {
+    grid-area: article3;
+    font-family: Arial, Helvetica, sans-serif;
+    column-count: 2;
+    column-rule: 1px solid black;
+    padding: 0.3vw;
+
+}
+
+main .second-article {
+    grid-area: article2;
+    margin: 0.4vw;
+}
+
+.second-article img {
+    width: 100%;
+}
+
+.second-article .photo-caption {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
+
+.second-article .about-geniy {
+    border-width: 0 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.second-article .about-geniy h1 {
+    font-size: 1.3vw;
+    margin: 0.65vw;
+}
+
+.second-article .about-geniy h2 {
+    font-size: 4vw;
+    display: none;
+    text-align: center;
+}
+
+.second-article .about-geniy .somehow {
+    column-count: 2;
+    margin: 0.6vw;
+}
+
+@font-face {
+    font-family: BestFontEver;
+    font-display: auto;
+    src: url('resources/comic.ttf') format('truetype');
+}
+
+main .third-article {
+    grid-area: article1;
+    display: flex;
+    flex-direction: row;
+    font-family: BestFontEver, cursive;
+    margin: 1vw 0.6vw 0.4vw 0.6vw;
+    padding: 0.5vw;
+    border: 2px dashed black;
+}
+
+#dark-mode:checked ~ .main-wrapper .third-article {
+    border: 2px dashed white;
+}
+
+main .article.third-article h1 {
+    width: 1em;
+    /* font-size: small; */
+    line-height: 1em;
+    font-size: 1.75vw;
+}   
+
+.third-article .notes {
+    column-count: 3;
+    column-rule: 1px solid black;
+    font-size: 0.9vw;
+    /* width: 100%;
+    height: 100%; */
+}
+
+#dark-mode:checked ~ .main-wrapper main .article {
+    column-rule: 1px solid white;
+}
+
+#dark-mode:checked ~ .main-wrapper .second-article .about-geniy h2 {
+    display: block;
+    color: pink;
+}
+
+#dark-mode:checked ~ .main-wrapper .second-article .about-geniy .somehow {
+    display: none;
+}
+
+main .article h1 {
+    column-span: all;
+    font-size: 2.6vw;
+    margin: 0.25em 0;
+    text-align: center;
+}
+main .article p {
+    margin: 0.5em;
+}
+
+main p::first-letter {
+    font-family: BestFontEver;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+

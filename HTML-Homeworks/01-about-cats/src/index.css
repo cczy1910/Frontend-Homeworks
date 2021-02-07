@@ -1,0 +1,130 @@
+.cont {
+    width: 320px;
+    height: 450px;
+    margin: 15px 13px;
+    border: 1px solid #d0d0d0;
+    display: inline-block;
+}
+
+#view:checked ~ .cont {
+    width: 720px;
+    height: 650px;
+    margin: 20px 13px;
+    border: 1px solid #d0d0d0;
+    display: block;
+}
+
+.cont:hover {
+    box-shadow: 0 0 5px #b0b0b0;
+}
+
+.cont .cat-photo {
+    object-fit: cover;
+    object-position: center; 
+    height: 48.5%;
+    width: 100%;
+}
+
+#view:checked ~ .cont .cat-photo {
+    object-fit: contain;
+    object-position: center; 
+    height: 62.5%;
+    width: 90%;
+    margin: 24px auto 0 auto;
+    display: block;
+}
+
+.cont .cat-caption {
+    margin: 0 24px;
+}
+
+.cont .cat-name {
+    font-size: 26px;
+    font-family: sans-serif;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 95%;
+}
+
+.cont .caption-line {
+    color: #606060;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin: 2px 0;
+}
+
+#view:checked ~ .cont .caption-line.character {
+    display: block;
+}
+
+.cont .caption-line.character {
+    display: none;
+}
+
+.cont .caption-line.age:before {
+    content: "Возраст: ";
+}
+
+.cont .caption-line.breed:before {
+    content: "Порода: ";
+}
+
+#view:checked ~ .cont .caption-line.breed {
+    display: none;
+}
+
+.cont .caption-line.diseases:before {
+    content: "Болезни: ";
+}
+
+#view:checked ~ .cont .caption-line.diseases {
+    display: none;
+}
+
+.cont .caption-line.description {
+    display: none;
+
+}
+
+#view:checked ~ .cont .caption-line.description {
+    display: block;
+}
+
+.cont .caption-line.status:before {
+    content: "Статус: ";
+}
+
+#view:checked ~ .cont .caption-line.status {
+    display: none;
+}
+
+.cont .caption-line.status {
+    margin-top: 20px;
+}
+
+.box {
+    width: 250px;
+    background-color: red;
+}
+
+.box:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.toggle-button {
+    height: 20px;
+    margin: 15px 0 0 15px;
+    transform: rotate(90deg);
+}
+
+#view:checked ~ label .toggle-button {
+    transform: rotate(180deg);
+}
+
+#view {
+    display: none;
+}

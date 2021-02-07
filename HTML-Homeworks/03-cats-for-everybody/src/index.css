@@ -1,0 +1,350 @@
+/* .cont {
+    width: 320px;
+    height: 450px;
+    margin: 15px 13px;
+    border: 1px solid #d0d0d0;
+    display: inline-block;
+}
+
+#view:checked ~ .cont {
+    width: 720px;
+    height: 650px;
+    margin: 20px 13px;
+    border: 1px solid #d0d0d0;
+    display: block;
+}
+
+.cont:hover {
+    box-shadow: 0 0 5px #b0b0b0;
+}
+
+.cont .cat-photo {
+    object-fit: cover;
+    object-position: center; 
+    height: 48.5%;
+    width: 100%;
+}
+
+#view:checked ~ .cont .cat-photo {
+    object-fit: contain;
+    object-position: center; 
+    height: 62.5%;
+    width: 90%;
+    margin: 24px auto 0 auto;
+    display: block;
+}
+
+.cont .cat-caption {
+    margin: 0 24px;
+}
+
+.cont .cat-name {
+    font-size: 26px;
+    font-family: sans-serif;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 95%;
+}
+
+.cont .caption-line {
+    color: #606060;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin: 2px 0;
+}
+
+#view:checked ~ .cont .caption-line.character {
+    display: block;
+}
+
+.cont .caption-line.character {
+    display: none;
+}
+
+.cont .caption-line.age:before {
+    content: "Возраст: ";
+}
+
+.cont .caption-line.breed:before {
+    content: "Порода: ";
+}
+
+#view:checked ~ .cont .caption-line.breed {
+    display: none;
+}
+
+.cont .caption-line.diseases:before {
+    content: "Болезни: ";
+}
+
+#view:checked ~ .cont .caption-line.diseases {
+    display: none;
+}
+
+.cont .caption-line.description {
+    display: none;
+
+}
+
+#view:checked ~ .cont .caption-line.description {
+    display: block;
+}
+
+.cont .caption-line.status:before {
+    content: "Статус: ";
+}
+
+#view:checked ~ .cont .caption-line.status {
+    display: none;
+}
+
+.cont .caption-line.status {
+    margin-top: 20px;
+}
+
+.box {
+    width: 250px;
+    background-color: red;
+}
+
+.box:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.toggle-button {
+    height: 20px;
+    margin: 15px 0 0 15px;
+    transform: rotate(90deg);
+}
+
+#view:checked ~ label .toggle-button {
+    transform: rotate(180deg);
+}
+
+#view {
+    display: none;
+} */
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    right: 0;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    z-index: 2500;
+}
+
+header {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'PT SansNarrow';
+    color: black;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+header::first-letter {
+    color: red;
+}
+
+footer {
+    position: sticky;
+    font-size: 14px;
+    color: #b0b0b0;
+    bottom: 0;
+    height: 92px;
+    border-top: 1px solid #d0d0d0;
+}
+
+footer .footer-left {
+    position: absolute;
+    left: 12px;
+    bottom: 8px;
+}
+
+footer .footer-right {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+}
+
+footer .footer-line {
+    margin: 5px 0;
+}
+
+footer .mail-icon {
+    height: 18px;
+    width: 18px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 16px;
+    margin: 2%;        
+    grid-auto-rows: 480px;
+}
+
+/* 
+.cat-photo {
+    display: none;
+} */
+
+.cont {
+    position: relative;
+    white-space: nowrap;
+    display: block;
+    border: 1px solid #d0d0d0;
+}
+
+.cont:hover {
+    box-shadow: 0 0 5px #b0b0b0;
+}
+
+.cont .photo-box {
+    height: 53%;
+    position: relative;
+}
+
+.cont .cat-photo {
+    object-fit: cover;
+    object-position: center; 
+    height: 100%;
+    width: 100%;
+}
+
+.cont .cat-caption {
+    width: 85%;
+    height: 42.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cont .cat-name {
+    font-size: 26px;
+    font-family: sans-serif;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+
+.cont .caption-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #606060;
+    font-size: 17px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.cont .caption-line.age:before {
+    content: "Возраст: ";
+}
+
+.cont .caption-line.breed:before {
+    content: "Порода: ";
+}
+
+.cont .caption-line.diseases:before {
+    content: "Болезни: ";
+}
+
+.cont .caption-line.status:before {
+    content: "Статус: ";
+}
+
+.filter-menu, .low {
+    display: none;
+}
+
+.high {
+    height: 100%;
+}
+
+
+@media all and (min-width: 375px) and (max-width: 730px) {
+    .main {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 28px;
+        margin: 5%;
+    }
+
+    .cont .photo-box {
+        height: 58.5%;
+        width: 100%;
+    }
+    
+    .cont .cat-caption {
+        width: 90%;
+        height: 38.5%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .main {
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-gap: 16px;
+        margin: 1%;
+    }
+
+
+    .filter-menu {
+        display: block;
+        grid-row: 1 / 4;
+        grid-column: 3;
+    }
+
+    .high {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    .low {
+        display: block;
+        padding: 4%;
+        height: 20%;
+        width: 92%;
+        border-top: 1px solid #d0d0d0;;
+    }
+
+    .low .caption-line {
+        margin-bottom: 3%;
+    }
+
+    .cont  {
+        white-space: normal;
+        position: relative;
+    }
+
+    .high .photo-box {
+        flex-grow: 2;
+        height: 90%;
+        /* width: auto; */
+        /* width: 500px; */
+        width: 100%;
+        margin: 2%;
+    }
+    
+    .high .cat-caption {
+        height: 90%;
+        width: 60%;
+        margin: 2%;
+    }
+}

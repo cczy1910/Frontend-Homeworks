@@ -1,0 +1,315 @@
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header, footer {
+    right: 0;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    z-index: 2500;
+}
+
+header {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'PT SansNarrow';
+    color: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+header::first-letter {
+    color: red;
+}
+
+footer {
+    position: fixed;
+    font-size: 14px;
+    color: #b0b0b0;
+    bottom: 0;
+    height: 92px;
+    border-top: 1px solid #d0d0d0;
+}
+
+footer .footer-left {
+    position: absolute;
+    left: 12px;
+    bottom: 8px;
+}
+
+footer .footer-right {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+}
+
+footer .footer-line {
+    margin: 5px 0;
+}
+
+footer .mail-icon {
+    height: 18px;
+    width: 18px;
+}
+
+.carousel {
+    width: 1670px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid #d0d0d0;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.act-label {
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    width: 100%;
+    z-index: 1001;
+}
+
+.sm-label {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 1001;
+}
+
+.activator {
+    display: none;
+}
+
+.show-modal {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.95);
+    padding: 20% 15%;
+    z-index: 3001;
+    font-size: 20px;
+}
+
+.modal .modal-window{
+    position: absolute;
+    height: 60%;
+    width: 70%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.modal .modal-photo {
+    height: 100%;
+    width: 60%;
+    margin-right: 50px;
+    float: left;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modal .modal-window .cat-caption {
+    padding: 70px;
+    text-align: left;
+}
+
+.modal .modal-window .desc-cat-name {
+    font-size: 40px;
+    margin: 30px;
+}
+
+.modal .close-modal {
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+
+.cat-block {
+    height: 400px;
+    width: 480px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 17px;
+    transition: right 0.4s ease-out;
+    right: -520px;
+    position: relative;
+    text-align: center;
+}
+
+.cat-photo {
+    object-fit: cover;
+    object-position: center;
+    margin-top: 40px;
+    height: 80%;
+    width: 100%;
+    opacity: 0.75;
+}
+.cat-block .cat-name {
+    font-size: 36px;
+    position: relative;
+    bottom: 260px;
+    display: none;
+}
+
+.navigation {
+    width: min-content;
+    margin: auto;
+}
+
+.act-selector {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+}
+    
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1),
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2),
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3),
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4),
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5),
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6),
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7),
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8) {
+    width: 600px;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1) .show-modal:checked + .modal,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2) .show-modal:checked + .modal,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3) .show-modal:checked + .modal,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4) .show-modal:checked + .modal,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5) .show-modal:checked + .modal,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6) .show-modal:checked + .modal,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7) .show-modal:checked + .modal,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8) .show-modal:checked + .modal {
+    display: block;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1) .act-label,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2) .act-label,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3) .act-label,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4) .act-label,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5) .act-label,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6) .act-label,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7) .act-label,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8) .act-label {
+    display: none;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1):hover,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2):hover,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3):hover,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4):hover,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5):hover,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6):hover,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7):hover,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8):hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1):hover .cat-photo,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2):hover .cat-photo,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3):hover .cat-photo,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4):hover .cat-photo,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5):hover .cat-photo,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6):hover .cat-photo,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7):hover .cat-photo,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8):hover .cat-photo {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1) .sm-label,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2) .sm-label,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3) .sm-label,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4) .sm-label,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5) .sm-label,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6) .sm-label,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7) .sm-label,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8) .sm-label,
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1):hover .cat-name,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2):hover .cat-name,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3):hover .cat-name,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4):hover .cat-name,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5):hover .cat-name,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6):hover .cat-name,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7):hover .cat-name,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8):hover .cat-name {
+    display: block;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block:nth-of-type(1) .cat-photo,
+.activator:nth-of-type(2):checked ~ .carousel .cat-block:nth-of-type(2) .cat-photo,
+.activator:nth-of-type(3):checked ~ .carousel .cat-block:nth-of-type(3) .cat-photo,
+.activator:nth-of-type(4):checked ~ .carousel .cat-block:nth-of-type(4) .cat-photo,
+.activator:nth-of-type(5):checked ~ .carousel .cat-block:nth-of-type(5) .cat-photo,
+.activator:nth-of-type(6):checked ~ .carousel .cat-block:nth-of-type(6) .cat-photo,
+.activator:nth-of-type(7):checked ~ .carousel .cat-block:nth-of-type(7) .cat-photo,
+.activator:nth-of-type(8):checked ~ .carousel .cat-block:nth-of-type(8) .cat-photo {
+    margin-top: 0;
+    height: 100%;
+    opacity: 1;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .navigation .nav-label:nth-of-type(1) .act-selector,
+.activator:nth-of-type(2):checked ~ .carousel .navigation .nav-label:nth-of-type(2) .act-selector,
+.activator:nth-of-type(3):checked ~ .carousel .navigation .nav-label:nth-of-type(3) .act-selector,
+.activator:nth-of-type(4):checked ~ .carousel .navigation .nav-label:nth-of-type(4) .act-selector,
+.activator:nth-of-type(5):checked ~ .carousel .navigation .nav-label:nth-of-type(5) .act-selector,
+.activator:nth-of-type(6):checked ~ .carousel .navigation .nav-label:nth-of-type(6) .act-selector,
+.activator:nth-of-type(7):checked ~ .carousel .navigation .nav-label:nth-of-type(7) .act-selector,
+.activator:nth-of-type(8):checked ~ .carousel .navigation .nav-label:nth-of-type(8) .act-selector {
+    background-color: gray;
+}
+
+.activator:nth-of-type(1):checked ~ .carousel .cat-block {
+    right: -520px;
+}
+
+.activator:nth-of-type(2):checked ~ .carousel .cat-block {
+    right: 0;
+}
+
+.activator:nth-of-type(3):checked ~ .carousel .cat-block {
+    right: 520px;
+}
+
+.activator:nth-of-type(4):checked ~ .carousel .cat-block {
+    right: 1040px;
+}
+
+.activator:nth-of-type(5):checked ~ .carousel .cat-block {
+    right: 1560px;
+}
+
+.activator:nth-of-type(6):checked ~ .carousel .cat-block {
+    right: 2080px;
+}
+
+.activator:nth-of-type(7):checked ~ .carousel .cat-block {
+    right: 2600px;
+}
+
+.activator:nth-of-type(8):checked ~ .carousel .cat-block {
+    right: 3120px;
+}

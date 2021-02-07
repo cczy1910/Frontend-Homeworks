@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Задача «Котограм»</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <input class="switcher boxed" id="boxed" type="checkbox" checked>
+  <input class="switcher scaled" id="scaled" type="checkbox">
+  <input class="switcher scaled-1" id="scaled-1" type="radio" name="scaled" checked>
+  <input class="switcher scaled-2" id="scaled-2" type="radio" name="scaled">
+  <input class="switcher scaled-3" id="scaled-3" type="radio" name="scaled">
+  <input class="switcher scaled-4" id="scaled-4" type="radio" name="scaled">
+  <input class="switcher rotated-1" id="rotated-1" type="radio" name="rotated" checked>
+  <input class="switcher rotated-2" id="rotated-2" type="radio" name="rotated">
+  <input class="switcher rotated-3" id="rotated-3" type="radio" name="rotated">
+  <input class="switcher rotated-4" id="rotated-4" type="radio" name="rotated">
+  <input class="switcher mirrored" id="mirrored" type="checkbox">
+  <input class="switcher filtered-1" id="filtered-1" type="radio" name="filtered" checked>
+  <input class="switcher filtered-2" id="filtered-2" type="radio" name="filtered">
+  <input class="switcher filtered-3" id="filtered-3" type="radio" name="filtered">
+  <input class="switcher filtered-4" id="filtered-4" type="radio" name="filtered">
+  <main>
+    <div class="control">
+      <div class="control__control-switch">
+        <label for="boxed">
+          <img class="control__icon control__icon-1" src="icons/fill.svg" alt="fill">
+        </label>
+      </div>
+      <div class="control__control-switch">
+        <img class="control__icon control__icon-2" src="icons/scale.svg" alt="scale">
+        <label for="scaled-1">
+          <span class="control__switch-label scaled-label scaled-label-1"></span>
+        </label>
+        <label for="scaled-2">
+          <span class="control__switch-label scaled-label scaled-label-2"></span>
+        </label>
+        <label for="scaled-3">
+          <span class="control__switch-label scaled-label scaled-label-3"></span>
+        </label>
+        <label for="scaled-4">
+          <span class="control__switch-label scaled-label scaled-label-4"></span>
+        </label>
+      </div>
+      <img class="control__logo" src="icons/logo.svg" alt="logo">
+      <div class="control__control-switch">
+        <img class="control__icon control__icon-3" src="icons/rotate.svg" alt="rotate">
+        <label for="rotated-1">
+          <span class="control__switch-label rotated-label rotated-label-1"></span>
+        </label>
+        <label for="rotated-2">
+          <span class="control__switch-label rotated-label rotated-label-2"></span>
+        </label>
+        <label for="rotated-3">
+          <span class="control__switch-label rotated-label rotated-label-3"></span>
+        </label>
+        <label for="rotated-4">
+          <span class="control__switch-label rotated-label rotated-label-4"></span>
+        </label>
+      </div>
+      <div class="control__control-switch">
+        <label for="mirrored">
+          <img class="control__icon control__icon-4" src="icons/flip.svg" alt="flip">
+        </label>
+      </div>
+    </div>
+    <div class="image-box">
+      <div class="image-box__image-frame">
+        <div class="image-box__image-mirror">
+          <img class="image-box__main-image" src="images/y_729f8ca0.jpg" alt="main image">
+        </div>
+      </div>
+    </div>
+    <div class="filters">
+      <img class="filters__nav filters__nav_left" src="icons/arrow.svg" alt="left">
+      <div class="filters__box">
+        <div class="filters__filter filters__filter_1">
+          <label for="filtered-1">
+            <span class="filters__filter-name">Без фильтра</span>
+            <img class="filters__filter-view" src="images/y_729f8ca0.jpg" alt="no filter">
+          </label>
+        </div>
+        <div class="filters__filter filters__filter_2">
+          <label for="filtered-2">
+            <span class="filters__filter-name">Питер</span>
+            <img class="filters__filter-view" src="images/y_729f8ca0.jpg" alt="grayscale">
+          </label>
+        </div>
+        <div class="filters__filter filters__filter_3">
+          <label for="filtered-3">
+            <span class="filters__filter-name">Ялта</span>
+            <img class="filters__filter-view" src="images/y_729f8ca0.jpg" alt="sepia">
+          </label>
+        </div>
+        <div class="filters__filter filters__filter_4">
+          <label for="filtered-4">
+            <span class="filters__filter-name">Уральское лето</span>
+            <img class="filters__filter-view" src="images/y_729f8ca0.jpg" alt="cold">
+          </label>
+        </div>
+      </div>
+      <img class="filters__nav filters__nav_right" src="icons/arrow.svg" alt="right">
+    </div>
+  </main>
+</body>
+
+</html>

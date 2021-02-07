@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Яндекс</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="icon" href="resources/favicon.png">
+</head>
+
+
+<body>
+  <input class="hide show-settings" type="checkbox" id="show-settings">
+  <input class="hide hide_1" type="checkbox" id="hide_1">
+  <input class="hide hide_2" type="checkbox" id="hide_2">
+  <input class="hide hide_3" type="checkbox" id="hide_3">
+  <input class="hide hide_4" type="checkbox" id="hide_4">
+  <input class="hide hide_5" type="checkbox" id="hide_5">
+  <input class="hide hide_6" type="checkbox" id="hide_6">
+  <input class="hide hide_7" type="checkbox" id="hide_7">
+  <header class="header">
+    <div class="header__location">
+      <img class="header__location-icon" src="resources/geo-arrow-icon.png">
+      Санкт-Петербург
+    </div>
+    <div class="header__settings">
+      <label for="show-settings">
+        Настройка
+      </label>
+      <div class="header__settings-popup">
+        <label for="hide_1">
+          <p>Посещаемое</p>
+        </label>
+        <label for="hide_2">
+          <p>Лучшие анекдоты</p>
+        </label>
+        <label for="hide_3">
+          <p>Телепрограмма</p>
+        </label>
+        <label for="hide_4">
+          <p>Автомобильные новости</p>
+        </label>
+        <label for="hide_5">
+          <p>Погода</p>
+        </label>
+        <label for="hide_6">
+          <p>Пробки</p>
+        </label>
+        <label for="hide_7">
+          <p>Карта</p>
+        </label>
+      </div>
+    </div>
+    <div class="mail">
+      <p class="mail__login">login</p>
+      <p>Почта <span class="mail__inbox">123</span></p>
+    </div>
+  </header>
+  <main class="main">
+    <img class="logo" src="resources/yandex-logo.webp">
+    <section class="news">
+      <header class="news__header">
+        <p class="news__title">Сейчас в СМИ</p>
+        <p class="news__title news__title_inactive">в Санкт-Петербурге</p>
+        <p class="news__date">13 ноября, понедельник 15:38</p>
+      </header>
+      <p class="news__line">Минюст США подтвердил регистрацию RT в качестве иностранного агента</p>
+      <p class="news__line">«Продуктивный диалог»: в Сочи завершились переговоры Путина и Эрдогана</p>
+      <p class="news__line">Сборная Италии впервые за 60 лет не сыграет на чемпионате мира</p>
+      <p class="news__line">В Кремле ответили на слова экс-главы ЦРУ о «запуганном» Путиным Трампе</p>
+      <p class="news__line">Мэй: Великобритания не хочет возвращаться к холодной войне с Россией</p>
+      <footer class="news__footer">
+        <p class="news__currency"><span class="news__currency-type">USD ЦБ</span> 58,52 <span
+            class="news__currency-diff">−0,10</span></p>
+        <p class="news__currency"><span class="news__currency-type">EUR ЦБ</span> 68,92 <span
+            class="news__currency-diff">+0,06</span></p>
+        <p class="news__currency"><span class="news__currency-type">НЕФТЬ</span> 63,10 <span
+            class="news__currency-diff">−0,80%</span></p>
+      </footer>
+    </section>
+    <section class="search">
+      <section class="search__services">
+        <p class="search__service-name">Видео</p>
+        <p class="search__service-name">Картинки</p>
+        <p class="search__service-name">Новости</p>
+      </section>
+      <div class="search__bar">
+        <div class="search__box">
+          <input class="search__bar-input">
+        </div>
+        <div class="search__button-box">
+          <input class="search__button" type="button" value="Найти">
+        </div>
+      </div>
+      <p class="search__every">
+        Найдется все. Например, <span class="search__example">выхожу я один на дорогу</span>
+      </p>
+    </section>
+    <img class="add1" src="resources/add1.jpg">
+    <div class="widgets widgets_1">
+      <section class="widget widget_1">
+        <h2 class="widget__header">Посещаемое</h2>
+        <p><span class="wigdet__bold-text">Маркет</span> - китайская распродажа</p>
+        <p><span class="wigdet__bold-text">Авто.ру</span> - Туссан третьей серии</p>
+        <p><span class="wigdet__bold-text">Недвижимость</span> - продажа студии</p>
+        <p><span class="wigdet__bold-text">Работа</span> - охранником</p>
+        <p><span class="wigdet__bold-text">Здоровье</span> - врач на связи</p>
+        <p><span class="wigdet__bold-text">Коллекции</span> - как мелировать волосы</p>
+        <p><span class="wigdet__bold-text">Авиабилеты</span> - из Санкт-Петербурга</p>
+      </section>
+      <section class="widget widget_2">
+        <h2 class="widget__header">Лучшие анекдоты</h2>
+        <p>Купил мужик шляпу</p>
+        <p>А она ему как раз</p>
+      </section>
+    </div>
+    <div class="widgets widgets_2">
+      <section class="widget widget_3">
+        <h2 class="widget__header">Телепрограмма</h2>
+        <p>16:00 Понять. Простить <span class="widget__gray-text">41 Домашний</span></p>
+        <p>16:30 Место встречи <span class="widget__gray-text">НТВ</span></p>
+        <p>16:30 Детективы <span class="widget__gray-text">Пятый канал</span></p>
+        <p>16:30 Новости <span class="widget__gray-text">РЕН ТВ</span></p>
+        <p>16:30 Гадалка <span class="widget__gray-text">ТВ-3</span></p>
+        <p>16:30 Реальные пацаны <span class="widget__gray-text">ТНТ</span></p>
+      </section>
+      <section class="widget widget_4">
+        <h2 class="widget__header">Автомобильные новости</h2>
+        <div class="auto-news">
+          <div class="widget__upper-shadow"></div>
+          <div class="auto-news__box">
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+            <p>Лень искать контент, но скролл есть <span class="widget__gray-text">12:34</span></p>
+          </div>
+          <div class="widget__lower-shadow"></div>
+        </div>
+      </section>
+    </div>
+    <div class="widgets widgets_3">
+      <section class="widget widget_5">
+        <h2 class="widget__header">Погода <div class="widget__weather-pic"></div><span class="widget__weather-temp">+1°
+            C</span></h2>
+        <p>Вечер −5, ночь −7</p>
+      </section>
+      <section class="widget widget_6">
+        <h2 class="widget__header">Пробки <img class="widget__traffic-pic" src="resources/traffic.svg"><span
+            class="widget__traffic-score">2 балла</span></h2>
+        <p>На дорогах свободно</p>
+      </section>
+      <section class="widget widget_7">
+        <h2 class="widget__header">Карта Санкт-Петербурга</h2>
+        <p><span class="wigdet__bold-text wigdet__bold-text_spaced">Такси</span><span
+            class="wigdet__bold-text wigdet__bold-text_spaced">Расписания</span></p>
+        <p><span class="wigdet__bold-text wigdet__bold-text_spaced">Междугородные автобусы</span></p>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
